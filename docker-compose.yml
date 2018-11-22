@@ -7,6 +7,8 @@ services:
       MYSQL_DATABASE: circuitverse_development
       MYSQL_ROOT_PASSWORD: root
   web:
+    labels:
+      shipyard.route: '/'
     build: .
     entrypoint: /circuitverse/bin/docker_run
     volumes:
